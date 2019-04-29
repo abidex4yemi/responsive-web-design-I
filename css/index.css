@@ -1,3 +1,621 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/* Custom styles */
+:root {
+  font-size: 16px;
+}
+
+body {
+  background: #fff;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif, Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.services-section {
+  border-top: 1px solid #010A26;
+  border-bottom: 1px solid #010A26;
+  padding: 2rem 0;
+}
+
+.header {
+  padding: .5em 0;
+  margin-bottom: 1em;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  background: #D92567;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list-container {
+  display: flex;
+}
+
+.nav-list-item {
+  margin-left: 50px;
+}
+
+.nav-list-item-link {
+  text-decoration: none;
+  color: #f4f4f4;
+  transition: .2s;
+  font-size: 1.1rem;
+}
+
+.nav-list-item-link:hover {
+  color: #010A26;
+}
+
+/* Hero styles */
+.main-section {
+  padding-top: 120px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-chant {
+  font-family: 'Playball', cursive;
+  color: #010A26;
+  display: block;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-media-container {
+  background: url('../img/header-img.png') no-repeat center/cover;
+  max-width: 100%;
+  width: 350px;
+  height: 350px;
+}
+
+.hero-content {
+  padding-right: 6rem;
+}
+
+.btn {
+  color: #010A26;
+  text-align: center;
+  transition: .3s;
+}
+
+.btn:hover {
+  outline: 0;
+  background: #731F35;
+  color: #fff;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.call-out {
+  margin-top: 1.5rem;
+  width: 200px;
+  padding: .9rem;
+  font-size: 2em;
+  cursor: pointer;
+  border-color: #010A26;
+}
+
+/* company-info-section */
+
+.border.container {
+  border-top: 2px solid #010A26;
+  border-bottom: 2px solid #010A26;
+  padding: 4rem 0;
+}
+
+.company-info-section-group {
+  margin: 3rem 0;
+}
+
+.company-info-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.company-info-media {
+  background: url('../img/mid-page-accent.jpg') no-repeat center/cover;
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  margin: 2rem 0;
+}
+
+.company-info-features,
+.company-info-about {
+  flex-basis: 46%;
+}
+
+.company-info-features {
+  padding-right: 2rem;
+}
+
+.info-section {
+  text-align: justify;
+}
+
+.info-section:nth-child(even) {
+  padding: 0 2rem;
+}
+
+.company-info-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.company-info-section-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-info-contact {
+  padding: 3rem 0;
+}
+
+.contact-list-item {
+  margin: 2rem 0;
+}
+
+.address {
+  display: block;
+  margin: .2rem 0;
+}
+
+.contact-info-links {
+  transition: .2s;
+  text-decoration: none;
+  color: #010A26;
+}
+
+.contact-info-links:hover {
+  color: #731F35;
+}
+
+/*=====================================
+* Page: services
+=======================================*/
+.services-banner {
+  background: url('../img/services-header.jpg') no-repeat center/cover;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.our-services-intro {
+  text-align: justify;
+  margin-bottom: 50px;
+}
+
+.service-center-container {
+  display: flex;
+}
+
+.service-center-info {
+  text-align: left;
+  flex-basis: 50%;
+  margin-right: auto;
+}
+
+.service-info-media-container {
+  flex-basis: 50%;
+}
+
+.services-cool-suff {
+  margin-top: 1em;
+}
+
+.services-cool-suff li {
+  margin-bottom: 1em;
+  margin-left: 16px;
+  list-style: square;
+}
+
+.company-info-contact {
+  text-align: left;
+}
+
+.services-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-list-item {
+  flex-basis: 48%;
+  border: 1px solid #010A26;
+  padding: 1em;
+  background-color: #f4f4f4;
+  margin: 10px;
+}
+
+.learn-more {
+  text-decoration: none;
+  font-size: 1em;
+  text-align: center;
+  padding: 5px 20px;
+  border: 1px solid#010A26;
+  background: #fff;
+  margin-top: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  color: #010A26;
+  transition: .2s;
+}
+
+.learn-more:hover {
+  background: #D92567;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* footer styles */
+.main-footer,
+.footer-copyright {
+  text-align: center;
+  padding: 3em 0 6em 0;
+}
+
+@media (max-width: 800px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list-container,
+  .header-nav {
+    display: flex;
+  }
+
+  .nav-list-item:first-child {
+    margin-left: 0;
+  }
+
+  .nav-list-item:first-child {
+    margin-right: 0;
+  }
+
+  .header-nav {
+    order: 2;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .logo-link {
+    order: 1;
+  }
+
+  .nav-list-item-link {
+    font-size: 1rem;
+  }
+
+  .hero-media-container {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-chant {
+    font-size: 2rem;
+  }
+
+  .info-section {
+    margin: 1rem 0;
+  }
+
+  .call-out {
+    padding: .5rem;
+    font-size: 1.5rem;
+  }
+
+  .info-section {
+    text-align: left;
+  }
+
+  /* services styles */
+  .services-list-container {
+    justify-content: space-between;
+  }
+
+  .services-list-item {
+    flex-basis: 47%;
+  }
+
+  .service-center-info {
+    padding: 0 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .header {
+    position: static;
+    background: #fff;
+  }
+
+  .main-section {
+    padding-top: 1rem;
+  }
+
+  .nav-list-container,
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav-list-container {
+    align-items: center;
+  }
+
+  .nav-list-item:first-child {
+    border-top: 1px solid #010A26;
+  }
+
+  .nav-list-item-link {
+    color: gray;
+  }
+
+  .logo {
+    padding: 1rem 0;
+    width: 250px;
+  }
+
+  .nav-list-item {
+    margin: 0;
+    border-bottom: 1px solid #010A26;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-nav {
+    width: 100%;
+  }
+
+  .hero-content {
+    padding: 0;
+  }
+
+  .company-info-content,
+  .company-info-about,
+  .company-info-section-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-section,
+  .main-footer {
+    padding: 0 1rem;
+  }
+
+  .info-section p {
+    text-align: left;
+    color: grey;
+    font-size: .8rem;
+  }
+
+  .info-section:nth-child(even) {
+    padding: 0;
+  }
+
+  .footer-copyright {
+    padding: 1rem 0;
+  }
+
+  /* services styles */
+  .services-list-container {
+    flex-direction: column;
+  }
+
+  .services-list-item {
+    flex-basis: 100%;
+  }
+
+  .service-center-container {
+    flex-direction: column;
+  }
+
+  .service-center-info {
+    margin: 2em 0;
+  }
+
+  .service-center-info .company-info-heading {
+    font-size: 1em;
+  }
+
+  .service-info-media-container {
+    margin-bottom: 2em;
+  }
+
+  .main-section p,
+  .service-center-info p {
+    text-align: left;
+    color: grey;
+    font-size: .8rem;
+  }
+}
